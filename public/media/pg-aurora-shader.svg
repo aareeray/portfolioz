@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 1000 1000" role="img" aria-label="Aurora">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#116141"/>
+      <stop offset="1" stop-color="#2d7d5d"/>
+    </linearGradient>
+  </defs>
+  <rect width="1000" height="1000" fill="url(#g)"/>
+  <circle cx="661" cy="574" r="292" fill="none" stroke="#67b797" stroke-width="1.5" opacity="0.5"/>
+  <circle cx="661" cy="574" r="175" fill="#3f8f6f" opacity="0.22"/>
+  <text x="60" y="900" font-family="Georgia, 'Times New Roman', serif" font-size="70" fill="#f4f1ea" opacity="0.92">Aurora</text>
+</svg>

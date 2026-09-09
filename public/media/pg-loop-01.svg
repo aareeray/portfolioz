@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 1000 1000" role="img" aria-label="Loop 01">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#823c0c"/>
+      <stop offset="1" stop-color="#9e5828"/>
+    </linearGradient>
+  </defs>
+  <rect width="1000" height="1000" fill="url(#g)"/>
+  <polyline points="0,591 167,668 333,656 500,470 667,430 833,513 1000,570" fill="none" stroke="#d89262" stroke-width="2" opacity="0.55"/>
+  <circle cx="500" cy="400" r="160" fill="#b06a3a" opacity="0.2"/>
+  <text x="60" y="900" font-family="Georgia, 'Times New Roman', serif" font-size="70" fill="#f4f1ea" opacity="0.92">Loop 01</text>
+</svg>

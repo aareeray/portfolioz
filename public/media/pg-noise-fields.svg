@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 1000 1000" role="img" aria-label="Noise Fields">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1d4c2c"/>
+      <stop offset="1" stop-color="#396848"/>
+    </linearGradient>
+  </defs>
+  <rect width="1000" height="1000" fill="url(#g)"/>
+  <circle cx="476" cy="547" r="285" fill="none" stroke="#73a282" stroke-width="1.5" opacity="0.5"/>
+  <circle cx="476" cy="547" r="171" fill="#4b7a5a" opacity="0.22"/>
+  <text x="60" y="900" font-family="Georgia, 'Times New Roman', serif" font-size="70" fill="#f4f1ea" opacity="0.92">Noise Fields</text>
+</svg>
