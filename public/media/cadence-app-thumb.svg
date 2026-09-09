@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-label="Cadence">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3c2c72"/>
+      <stop offset="1" stop-color="#58488e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#g)"/>
+  <line x1="216" y1="180" x2="216" y2="720" stroke="#9282c8" stroke-width="1" opacity="0.35"/>
+  <line x1="408" y1="180" x2="408" y2="720" stroke="#9282c8" stroke-width="1" opacity="0.35"/>
+  <line x1="600" y1="180" x2="600" y2="720" stroke="#9282c8" stroke-width="1" opacity="0.35"/>
+  <line x1="792" y1="180" x2="792" y2="720" stroke="#9282c8" stroke-width="1" opacity="0.35"/>
+  <line x1="984" y1="180" x2="984" y2="720" stroke="#9282c8" stroke-width="1" opacity="0.35"/>
+  <rect x="408" y="306" width="384" height="288" fill="#6a5aa0" opacity="0.25" transform="rotate(12 600 450)"/>
+  <text x="72" y="810" font-family="Georgia, 'Times New Roman', serif" font-size="63" fill="#f4f1ea" opacity="0.92">Cadence</text>
+</svg>

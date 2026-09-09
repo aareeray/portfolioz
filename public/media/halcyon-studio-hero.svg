@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-label="Halcyon">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5c4f2c"/>
+      <stop offset="1" stop-color="#786b48"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#g)"/>
+  <polyline points="0,639 267,666 533,645 800,468 1067,434 1333,494 1600,580" fill="none" stroke="#b2a582" stroke-width="2" opacity="0.55"/>
+  <circle cx="800" cy="400" r="160" fill="#8a7d5a" opacity="0.2"/>
+  <text x="96" y="900" font-family="Georgia, 'Times New Roman', serif" font-size="70" fill="#f4f1ea" opacity="0.92">Halcyon</text>
+</svg>

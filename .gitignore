@@ -1,0 +1,27 @@
+# dependencies (declared in package.json for unrestricted machines)
+node_modules/
+
+# build output
+dist/
+
+# local database + runtime data
+.data/
+*.sqlite
+*.sqlite-journal
+*.db
+
+# env & secrets
+.env
+.env.local
+.env.*.local
+
+# logs
+*.log
+npm-debug.log*
+
+# os / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
