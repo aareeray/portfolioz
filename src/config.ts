@@ -7,6 +7,12 @@ import path from "node:path";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 
+try {
+  process.loadEnvFile?.(path.join(ROOT, ".env"));
+} catch {
+  // .env is optional
+}
+
 function str(name: string, fallback?: string): string {
   const v = process.env[name];
   if (v === undefined || v === "") {

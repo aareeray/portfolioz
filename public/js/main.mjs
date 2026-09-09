@@ -12,6 +12,8 @@ import { initTransitions } from "./transition.mjs";
 import { initProcess } from "./process.mjs";
 import { initExperiments } from "./experiments.mjs";
 import { initAudio } from "./audio.mjs";
+import { initHomeSync } from "./homeSync.mjs";
+import { initIntro } from "./intro.mjs";
 
 const teardowns = [];
 
@@ -26,6 +28,7 @@ function safe(name, fn) {
 }
 
 function boot() {
+  safe("intro", initIntro);
   safe("clock", initClock);
   safe("reveal", initReveal);
   safe("menu", initMenu);
@@ -37,6 +40,7 @@ function boot() {
   safe("transitions", initTransitions);
   safe("experiments", initExperiments);
   safe("audio", initAudio);
+  safe("homeSync", initHomeSync);
 }
 
 if (document.readyState === "loading") {

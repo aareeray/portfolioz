@@ -1,109 +1,96 @@
 import type { SiteSettings } from "../types/index.ts";
 
 /**
- * Default, fully self-authored site content. This is the fallback used when the
- * settings row is absent and the base object the seed persists. All names/copy are
- * placeholder material — not taken from the reference site.
+ * Site configuration and content for Huy Phan (Huyml.co).
  */
 export const defaultSettings: SiteSettings = {
-  siteTitle: "Studio Nordwell",
+  siteTitle: "Huy Phan - Award-winning designer",
   description:
-    "Independent design & interaction studio. We craft editorial digital experiences for brands that care about the details.",
-  location: "Hanoi, Vietnam",
+    "Huy Phan (Huyml) is an award-winning designer and art director based in Ho Chi Minh city, Vietnam.",
+  location: "HCMC, Vietnam",
   timezone: "Asia/Ho_Chi_Minh",
-  email: "hello@studionordwell.example",
-  phone: null,
-  availability: "Available for new work — Q3 2026",
+  email: "hello@huyml.co",
+  phone: "+84",
+  availability: "Available for select projects in 2026",
   socialLinks: [
-    { label: "Instagram", url: "https://example.com/instagram" },
-    { label: "Are.na", url: "https://example.com/arena" },
-    { label: "LinkedIn", url: "https://example.com/linkedin" },
-    { label: "Read.cv", url: "https://example.com/readcv" },
+    { label: "YouTube", url: "https://www.youtube.com/@huyml.studio" },
+    { label: "Behance", url: "https://www.behance.net/huyphan2602" },
+    { label: "Dribbble", url: "https://dribbble.com/huyphan2602" },
+    { label: "LinkedIn", url: "https://www.linkedin.com/in/huy-phan-086023a5/" },
+    { label: "Instagram", url: "https://www.instagram.com/huy.phan.2602" },
+    { label: "Facebook", url: "https://www.facebook.com/phan.huy.2602" },
+    { label: "Unsplash", url: "https://unsplash.com/@huyphan2602" },
+    { label: "Pexels", url: "https://www.pexels.com/@huy-phan-316220/" },
   ],
   resumeUrl: null,
-  showreelUrl: null,
+  showreelUrl: "https://player.vimeo.com/video/1041162444",
   audioEnabled: true,
   navLabels: {
-    work: "Work",
-    about: "About",
-    playground: "Playground",
-    contact: "Contact",
+    work: "WORK",
+    about: "ABOUT",
+    playground: "PLAYGROUND",
+    contact: "CONTACT",
   },
-  footerText: "Designed & built in-house. Recreation for study purposes.",
+  footerText: "HUYML© copyright 2026 · Ho Chi Minh City, Vietnam",
   intro:
-    "I'm an independent designer working at the intersection of brand, product, and motion — building considered digital experiences from concept through to the last frame.",
+    "Shaping digital experiences with clarity, intention, character, and being a good friend with digital agencies, design studios, startups, and businesses around the world since 2018.",
   bio: [
-    "Over the last decade I've partnered with founders, studios, and cultural institutions to shape identities and interfaces that feel intentional and quietly confident.",
-    "My work favours restraint: strong typography, generous space, and motion that guides rather than decorates. I care about the moment a page loads, the weight of a hover, and the rhythm of a scroll.",
-    "When I'm not designing, I'm collecting typefaces, tuning synths, and over-engineering my coffee.",
+    "Plant Daddy · Gooner since the Invincibles · Married to a beautiful knitter · 3 cats call him dad · BlackBerry Collector · Pool Player but Chicken level · into watches now...",
+    "Shaping digital experiences with clarity, intention, character and being a good friend with digital agencies, design studios, startups and businesses around the world since 2018.",
   ],
   capabilities: [
     {
-      title: "Design",
-      items: ["Art Direction", "Brand Identity", "UI / UX", "Design Systems"],
-    },
-    {
-      title: "Motion",
+      title: "Core",
       items: [
-        "Interaction Design",
-        "Prototyping",
-        "Web Animation",
-        "Showreels",
+        "Digital Art Direction",
+        "Website Design",
+        "Application Design",
+        "Interactive Storytelling",
       ],
     },
     {
-      title: "Build",
+      title: "Motion & Craft",
       items: [
-        "Front-end Engineering",
-        "Creative Development",
-        "Performance",
-        "Accessibility",
+        "Website Motion & Animation",
+        "Design System",
+        "User Experience",
+        "Process & Approach",
       ],
     },
   ],
   process: [
     {
       index: 1,
-      title: "Discover",
-      description:
-        "Immersion, research, and framing the real problem before pixels.",
+      title: "Discover & Frame",
+      description: "Getting deep into the brand story, vision, and core purpose.",
     },
     {
       index: 2,
-      title: "Define",
-      description:
-        "Sharpening direction into principles, references, and a north star.",
+      title: "Art Direction & System",
+      description: "Defining typography, motion pacing, and visual character.",
     },
     {
       index: 3,
-      title: "Design",
-      description: "Systems, typography, and composition that carry the idea.",
+      title: "Interactive Craft",
+      description: "Prototyping fluid transitions, micro-interactions, and 3D moments.",
     },
     {
       index: 4,
-      title: "Prototype",
-      description:
-        "Motion and interaction studies to feel the thing, not just see it.",
-    },
-    {
-      index: 5,
-      title: "Build",
-      description: "Robust, accessible, performant front-end craft.",
-    },
-    {
-      index: 6,
-      title: "Launch",
-      description: "Polish, QA across devices, and a considered hand-off.",
+      title: "Execution & Polish",
+      description: "Delivering award-winning performance, accessibility, and fidelity.",
     },
   ],
   clients: [
-    "Meridian",
-    "Northlight",
-    "Atlas & Co.",
-    "Cadence",
-    "Verdant",
-    "Halcyon",
-    "Foundry",
-    "Lumen",
+    "Unilever",
+    "VinPearl",
+    "Autonomous",
+    "Soravia",
+    "NanoTemper",
+    "Arvid Nordquist",
+    "Soluis Group",
+    "Klingit",
+    "ToyFight",
+    "Stockfiller",
+    "Serious Business",
   ],
 };

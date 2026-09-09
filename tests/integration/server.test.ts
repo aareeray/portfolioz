@@ -54,7 +54,7 @@ test("home page renders with seeded content", async () => {
   const res = await fetch(`${base}/`);
   assert.equal(res.status, 200);
   const body = await res.text();
-  assert.match(body, /Studio Nordwell/);
+  assert.match(body, /Huy Phan/);
   assert.match(body, /Selected work/);
 });
 
@@ -67,7 +67,7 @@ test("GET /api/projects returns published projects", async () => {
 });
 
 test("GET /api/projects/:slug returns media, 404 for unknown", async () => {
-  const ok = await fetch(`${base}/api/projects/meridian-identity`);
+  const ok = await fetch(`${base}/api/projects/dafi-tropicdane`);
   assert.equal(ok.status, 200);
   const data = (await ok.json()) as { project: { media: unknown[] } };
   assert.ok(Array.isArray(data.project.media));
@@ -77,10 +77,10 @@ test("GET /api/projects/:slug returns media, 404 for unknown", async () => {
 });
 
 test("project detail page renders", async () => {
-  const res = await fetch(`${base}/work/meridian-identity`);
+  const res = await fetch(`${base}/work/dafi-tropicdane`);
   assert.equal(res.status, 200);
   const body = await res.text();
-  assert.match(body, /Meridian/);
+  assert.match(body, /DAFI/);
 });
 
 test("unknown route returns 404", async () => {

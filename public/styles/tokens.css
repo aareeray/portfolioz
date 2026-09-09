@@ -1,87 +1,101 @@
 /* ============================================================================
-   Design tokens — single source of truth for color, type, space, motion.
-   Approximated to the reference genre (see docs/reference-analysis.md §9).
-   Tune here to match measured reference values.
+   Design tokens for huyml.co recreation
    ========================================================================== */
+
+@font-face {
+  font-family: "BT Grotesk Medium";
+  src: url("https://framerusercontent.com/assets/pczyWZYmicHp9LhGgMJo7tnDcHo.woff2") format("woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 500;
+}
+@font-face {
+  font-family: "BT Grotesk Regular";
+  src: url("https://framerusercontent.com/assets/oDqinH2S9k4fMbGueYwREUmNFM.woff2") format("woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "F37 Bolton Trial Regular";
+  src: url("https://framerusercontent.com/assets/NjDO01jId5REkpwNN1pD7i8fBLY.woff2") format("woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "BT Glyphius Regular";
+  src: url("https://framerusercontent.com/assets/xirQ3g4Sv5q7MG0KvL1PiOOLLBA.woff2") format("woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "BT Grotesk Bold";
+  src: url("https://framerusercontent.com/assets/7wvwHnWrXSgYhuk2mEt4LrDGXo.woff2") format("woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: "F37 Bolton Trial Bold";
+  src: url("https://framerusercontent.com/assets/OUUqRFRKQpMerpUcBlnnMAKbp0.woff2") format("woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
+}
+
 :root {
-  /* ---- Color (restrained, warm, dark editorial) ---- */
-  --color-bg: #0e0d0b;
-  --color-bg-alt: #16150f;
-  --color-bg-raise: #1c1a14;
-  --color-text: #f4f1ea;
-  --color-text-strong: #fbf9f4;
-  --color-muted: #9c968a;
-  --color-faint: #6a655c;
-  --color-border: rgba(244, 241, 234, 0.14);
-  --color-border-strong: rgba(244, 241, 234, 0.28);
-  --color-accent: #c8542b;
-  --color-accent-soft: rgba(200, 84, 43, 0.16);
+  /* Colors */
+  --color-bg: #ececec;
+  --color-bg-alt: #e3e3e3;
+  --color-bg-dark: #121212;
+  --color-text: #0d0d0d;
+  --color-text-strong: #000000;
+  --color-muted: rgba(0, 0, 0, 0.45);
+  --color-faint: rgba(0, 0, 0, 0.25);
+  --color-border: rgba(0, 0, 0, 0.1);
+  --color-border-strong: rgba(0, 0, 0, 0.2);
+  --color-accent: #ff3b30;
+  --color-accent-orange: #ff4500;
+  
+  /* Fonts */
+  --font-display: "BT Grotesk Bold", "BT Grotesk Medium", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-body: "BT Grotesk Regular", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-serif: "F37 Bolton Trial Regular", Georgia, serif;
+  --font-mono: ui-monospace, "SF Mono", "Menlo", monospace;
 
-  /* ---- Typography ---- */
-  --font-display: Georgia, "Times New Roman", "Songti SC", serif;
-  --font-body: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  --font-mono: ui-monospace, "SF Mono", "Cascadia Code", "JetBrains Mono", Menlo, Consolas, monospace;
+  /* Type scale */
+  --text-2xs: 10px;
+  --text-xs: 11px;
+  --text-sm: 13px;
+  --text-md: 15px;
+  --text-lg: 18px;
+  --text-xl: 24px;
+  --text-2xl: 32px;
+  --text-display: clamp(2rem, 1.5rem + 3vw, 4rem);
+  --text-numeral: clamp(5rem, 3rem + 8vw, 12rem);
 
-  /* Fluid type scale (min viewport 360px → max 1440px) */
-  --text-xs: clamp(0.72rem, 0.7rem + 0.1vw, 0.78rem);
-  --text-sm: clamp(0.82rem, 0.79rem + 0.15vw, 0.9rem);
-  --text-md: clamp(0.95rem, 0.9rem + 0.25vw, 1.05rem);
-  --text-lg: clamp(1.15rem, 1.02rem + 0.6vw, 1.5rem);
-  --text-xl: clamp(1.6rem, 1.2rem + 1.8vw, 2.6rem);
-  --text-display: clamp(2.4rem, 1.3rem + 5vw, 5.5rem);
-  --text-hero: clamp(3rem, 1rem + 10vw, 10rem);
-
-  --leading-tight: 1.02;
-  --leading-snug: 1.14;
-  --leading-normal: 1.45;
-  --leading-relaxed: 1.65;
+  --leading-tight: 1.1;
+  --leading-normal: 1.4;
+  --leading-relaxed: 1.6;
 
   --tracking-tight: -0.02em;
   --tracking-normal: 0;
-  --tracking-wide: 0.02em;
-  --tracking-caps: 0.14em;
+  --tracking-wide: 0.04em;
+  --tracking-caps: 0.08em;
 
-  --weight-normal: 400;
-  --weight-medium: 500;
-  --weight-semibold: 600;
-
-  /* ---- Spacing scale (rem) ---- */
-  --space-1: 0.25rem;
-  --space-2: 0.5rem;
-  --space-3: 0.75rem;
-  --space-4: 1rem;
-  --space-5: 1.5rem;
-  --space-6: 2rem;
-  --space-7: 3rem;
-  --space-8: 4rem;
-  --space-9: 6rem;
-  --space-10: 8rem;
-  --space-11: 11rem;
-
-  /* Section rhythm (fluid) */
-  --section-y: clamp(4rem, 2rem + 8vw, 10rem);
-  --gutter: clamp(1.25rem, 0.5rem + 3vw, 3.5rem);
-
-  /* ---- Layout ---- */
-  --container-max: 1440px;
-  --container-narrow: 820px;
-  --header-h: 4.5rem;
-  --radius-sm: 2px;
-  --radius-md: 6px;
-
-  /* ---- Motion ---- */
-  --dur-fast: 0.2s;
-  --dur-normal: 0.45s;
-  --dur-slow: 0.8s;
-  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
-  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
-  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
-
-  /* ---- Elevation ---- */
+  /* Z-indices */
+  --z-base: 1;
+  --z-card: 10;
+  --z-header: 100;
+  --z-modal: 1000;
   --z-cursor: 9999;
-  --z-menu: 900;
-  --z-header: 800;
-  --z-transition: 950;
 
-  color-scheme: dark;
+  /* Transitions */
+  --dur-fast: 0.15s;
+  --dur-normal: 0.4s;
+  --dur-slow: 0.8s;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
 }

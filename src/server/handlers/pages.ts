@@ -23,12 +23,7 @@ import { getAnalytics } from "../../lib/analytics.ts";
 export function registerPageRoutes(router: Router): void {
   router.get("/", (ctx) => {
     const settings = getSettings();
-    const featured = listFeaturedProjects();
-    // Fall back to first few published if nothing is flagged featured.
-    const list =
-      featured.length > 0
-        ? featured
-        : listProjects({ publishedOnly: true }).slice(0, 4);
+    const list = listProjects({ publishedOnly: true });
     sendHtml(ctx.res, renderHome(settings, list));
   });
 

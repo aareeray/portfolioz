@@ -1,13 +1,11 @@
-// Accessible ambient-audio toggle. Never autoplays. Persists preference in
-// localStorage. Uses the Web Audio API to synthesise a soft tone bed so no
-// audio asset is bundled (swap for a real source via [data-audio-src]).
-
+// Ambient audio toggle using Web Audio API synthesizer
 const STORAGE_KEY = "pf_audio_enabled";
 
 export function initAudio() {
   const toggle = document.querySelector("[data-audio-toggle]");
   if (!toggle) return () => {};
 
+  const labelSpan = toggle.querySelector(".audio-label");
   let ctx = null;
   let gain = null;
   let nodes = [];
@@ -16,6 +14,13 @@ export function initAudio() {
   const setState = (on) => {
     enabled = on;
     toggle.setAttribute("aria-pressed", String(on));
+    if (on) {
+      toggle.classList.add("is-playing");
+      if (labelSpan) labelSpan.innerHTML = 'Audio <strong>On</strong>';
+    } else {
+      toggle.classList.remove("is-playing");
+      if (labelSpan) labelSpan.innerHTML = 'Audio <strong>Off</strong>';
+    }
     try {
       localStorage.setItem(STORAGE_KEY, on ? "1" : "0");
     } catch {
@@ -31,8 +36,9 @@ export function initAudio() {
     gain = ctx.createGain();
     gain.gain.value = 0;
     gain.connect(ctx.destination);
-    // Two detuned sines for a soft pad.
-    [110, 110.4].forEach((freq) => {
+    
+    // Soft atmospheric chord (F major 7 / ambient drone)
+    [174.61, 220.0, 261.63, 329.63].forEach((freq) => {
       const osc = ctx.createOscillator();
       osc.type = "sine";
       osc.frequency.value = freq;
@@ -40,7 +46,7 @@ export function initAudio() {
       osc.start();
       nodes.push(osc);
     });
-    gain.gain.linearRampToValueAtTime(0.04, ctx.currentTime + 1.2);
+    gain.gain.linearRampToValueAtTime(0.03, ctx.currentTime + 1.2);
   };
 
   const stopTone = () => {
@@ -72,14 +78,6 @@ export function initAudio() {
   };
 
   toggle.addEventListener("click", onClick);
-  // Reflect stored preference in the UI, but require a user gesture to actually
-  // start audio (browser policy + accessibility).
-  try {
-    if (localStorage.getItem(STORAGE_KEY) === "1")
-      toggle.setAttribute("aria-pressed", "true");
-  } catch {
-    /* ignore */
-  }
 
   return () => {
     toggle.removeEventListener("click", onClick);
